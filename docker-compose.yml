@@ -1,0 +1,24 @@
+version: '3.3'
+
+networks:
+  default:
+      external:
+        name: main
+
+services:
+  nginx:
+    image: laravel/nginx
+    volumes:
+      - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+    networks:
+      - default
+    environment:
+      - VIRTUAL_HOST=codetest.test
+      - VIRTUAL_PORT=80
+
+  php-fpm:
+    image: laravel/php:latest
+    volumes:
+      - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+    networks:
+      - default

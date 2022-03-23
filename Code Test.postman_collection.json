@@ -1,0 +1,2304 @@
+{
+	"info": {
+		"_postman_id": "43765604-f0ae-4124-a02b-d27c4d10fabe",
+		"name": "Code Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Coupons",
+			"item": [
+				{
+					"name": "Create a Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test 9\",\n    \"description\": \"Test\",\n    \"discount_type\": \"percentage\",\n    \"image_url\": \"tmp/coupon.jpg\",\n    \"amount\": 2000,\n    \"code\": \"1234\",\n    \"start_datetime\": \"2022-04-01 09:00:00\",\n    \"end_datetime\": \"2022-04-30 23:59:59\",\n    \"coupon_type\": \"private\",\n    \"used_count\" : 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/coupons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n}"
+								},
+								"url": {
+									"raw": "{{url}}/coupons",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:55:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/api/coupons\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The request parameters are incorrect, please make sure to follow the documentation about request parameters of the resource.\",\n        \"code\": 400002,\n        \"validation\": [\n            {\n                \"attribute\": \"name\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The name field is required.\"\n                    }\n                ]\n            },\n            {\n                \"attribute\": \"discount_type\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The discount type field is required.\"\n                    }\n                ]\n            },\n            {\n                \"attribute\": \"amount\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The amount field is required.\"\n                    }\n                ]\n            },\n            {\n                \"attribute\": \"image_url\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The image url field is required.\"\n                    }\n                ]\n            },\n            {\n                \"attribute\": \"coupon_type\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The coupon type field is required.\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"duration\": 0.14596915245056152\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test 8\",\n    \"description\": \"Test\",\n    \"discount_type\": \"percentage\",\n    \"image_url\": \"tmp/coupon.jpg\",\n    \"amount\": 2000,\n    \"code\": \"1234\",\n    \"start_datetime\": \"2022-04-01 09:00:00\",\n    \"end_datetime\": \"2022-04-30 23:59:59\",\n    \"coupon_type\": \"private\",\n    \"used_count\" : 1\n}"
+								},
+								"url": {
+									"raw": "{{url}}/coupons",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:58:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/api/coupons\"\n    },\n    \"data\": {\n        \"id\": 6\n    },\n    \"errors\": [],\n    \"duration\": 0.16504716873168945\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve the list of coupons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/coupons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/coupons",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:58:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/coupons\",\n        \"limit\": 30,\n        \"offset\": 0\n    },\n    \"data\": [\n        {\n            \"id\": 1,\n            \"admin_id\": 1,\n            \"name\": \"Test updated id 1\",\n            \"description\": \"Test\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 100,\n            \"image_url\": \"tmp/ggwp.jpg\",\n            \"code\": 5678,\n            \"start_datetime\": \"2020-10-10 09:00:00\",\n            \"end_datetime\": \"2020-10-30 23:59:59\",\n            \"coupon_type\": \"public\",\n            \"used_count\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 08:02:18\",\n            \"updated_at\": \"2022-03-23 09:20:56\"\n        },\n        {\n            \"id\": 2,\n            \"admin_id\": 1,\n            \"name\": \"Test 1\",\n            \"description\": \"Test\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 100,\n            \"image_url\": \"tmp/coupon.jpg\",\n            \"code\": 1234,\n            \"start_datetime\": \"2020-10-10 09:00:00\",\n            \"end_datetime\": \"2020-10-30 23:59:59\",\n            \"coupon_type\": \"public\",\n            \"used_count\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 08:04:50\",\n            \"updated_at\": \"2022-03-23 08:04:50\"\n        },\n        {\n            \"id\": 3,\n            \"admin_id\": 1,\n            \"name\": \"Test 1\",\n            \"description\": \"Test\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 100,\n            \"image_url\": \"tmp/coupon.jpg\",\n            \"code\": 1234,\n            \"start_datetime\": \"2020-10-10 09:00:00\",\n            \"end_datetime\": \"2020-10-30 23:59:59\",\n            \"coupon_type\": \"public\",\n            \"used_count\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 08:05:46\",\n            \"updated_at\": \"2022-03-23 08:05:46\"\n        },\n        {\n            \"id\": 5,\n            \"admin_id\": 1,\n            \"name\": \"Test 5\",\n            \"description\": \"Test\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 2000,\n            \"image_url\": \"tmp/coupon.jpg\",\n            \"code\": 1234,\n            \"start_datetime\": \"2020-10-10 09:00:00\",\n            \"end_datetime\": \"2020-10-30 23:59:59\",\n            \"coupon_type\": \"public\",\n            \"used_count\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 09:50:20\",\n            \"updated_at\": \"2022-03-23 09:50:20\"\n        },\n        {\n            \"id\": 6,\n            \"admin_id\": 1,\n            \"name\": \"Test 8\",\n            \"description\": \"Test\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 2000,\n            \"image_url\": \"tmp/coupon.jpg\",\n            \"code\": 1234,\n            \"start_datetime\": \"2022-04-01 09:00:00\",\n            \"end_datetime\": \"2022-04-30 23:59:59\",\n            \"coupon_type\": \"private\",\n            \"used_count\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 09:58:01\",\n            \"updated_at\": \"2022-03-23 09:58:01\"\n        }\n    ],\n    \"errors\": [],\n    \"duration\": 0.15688705444335938\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a coupon",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test updated id 2\",\n    \"description\": \"Tested\",\n    \"discount_type\": \"percentage\",\n    \"amount\": 100,\n    \"image_url\": \"tmp/ggwp.jpg\",\n    \"code\": \"5678\",\n    \"start_datetime\": \"2020-10-10 09:00:00\",\n    \"end_datetime\": \"2020-10-30 23:59:59\",\n    \"coupon_type\": \"public\",\n    \"used_count\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupons/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test updated id 1\",\n    \"description\": \"Tested\",\n    \"discount_type\": \"percentage\",\n    \"amount\": 100,\n    \"image_url\": \"tmp/ggwp.jpg\",\n    \"code\": \"5678\",\n    \"start_datetime\": \"2020-10-10 09:00:00\",\n    \"end_datetime\": \"2020-10-30 23:59:59\",\n    \"coupon_type\": \"public\",\n    \"used_count\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:00:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/coupons/1\"\n    },\n    \"data\": {\n        \"id\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.16434788703918457\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test updated id 1\",\n    \"description\": \"Tested\",\n    \"discount_type\": \"percentage\",\n    \"amount\": 100,\n    \"image_url\": \"tmp/ggwp.jpg\",\n    \"code\": \"5678\",\n    \"start_datetime\": \"2020-10-10 09:00:00\",\n    \"end_datetime\": \"2020-10-30 23:59:59\",\n    \"coupon_type\": \"public\",\n    \"used_count\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"13"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:00:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/coupons/13\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The updating resource that corresponds to the ID wasn't found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.14594101905822754\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test updated id 2\",\n    \"description\": \"Tested\",\n    \"image_url\": \"tmp/ggwp.jpg\",\n    \"code\": \"5678\",\n    \"start_datetime\": \"2020-10-10 09:00:00\",\n    \"end_datetime\": \"2020-10-30 23:59:59\",\n    \"coupon_type\": \"public\",\n    \"used_count\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"2"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:00:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/coupons/2\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The request parameters are incorrect, please make sure to follow the documentation about request parameters of the resource.\",\n        \"code\": 400002,\n        \"validation\": [\n            {\n                \"attribute\": \"discount_type\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The discount type field is required.\"\n                    }\n                ]\n            },\n            {\n                \"attribute\": \"amount\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The amount field is required.\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"duration\": 0.1497199535369873\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/coupons/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:55:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/api/coupons/6\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The deleting resource that corresponds to the ID wasn't found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.16289210319519043\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:01:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/api/coupons/3\"\n    },\n    \"data\": {\n        \"deleted\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.16779708862304688\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve a coupon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/coupons/13",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:58:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/coupons/1\"\n    },\n    \"data\": {\n        \"id\": 1,\n        \"admin_id\": 1,\n        \"name\": \"Test updated id 1\",\n        \"description\": \"Test\",\n        \"discount_type\": \"percentage\",\n        \"amount\": 100,\n        \"image_url\": \"tmp/ggwp.jpg\",\n        \"code\": 5678,\n        \"start_datetime\": \"2020-10-10 09:00:00\",\n        \"end_datetime\": \"2020-10-30 23:59:59\",\n        \"coupon_type\": \"public\",\n        \"used_count\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2022-03-23 08:02:18\",\n        \"updated_at\": \"2022-03-23 09:20:56\"\n    },\n    \"errors\": [],\n    \"duration\": 0.14078116416931152\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"13"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 09:59:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/coupons/13\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The resource that matches the request ID does not found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.14118409156799316\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"item": [
+				{
+					"name": "Create a Shop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"SEVEN ELEVEN 2\",\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/shops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"SEVEN ELEVEN\",\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}"
+								},
+								"url": {
+									"raw": "{{url}}/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:17:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/api/shops\"\n    },\n    \"data\": {\n        \"id\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.1634690761566162\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}"
+								},
+								"url": {
+									"raw": "{{url}}/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:18:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/api/shops\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The request parameters are incorrect, please make sure to follow the documentation about request parameters of the resource.\",\n        \"code\": 400002,\n        \"validation\": [\n            {\n                \"attribute\": \"name\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The name field is required.\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"duration\": 0.1281590461730957\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve the list of shop",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/shops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:19:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/shops\",\n        \"limit\": 30,\n        \"offset\": 0\n    },\n    \"data\": [\n        {\n            \"id\": 1,\n            \"admin_id\": 1,\n            \"name\": \"SEVEN ELEVEN\",\n            \"query\": null,\n            \"latitude\": \"19.12300000\",\n            \"longitude\": \"12.34300000\",\n            \"zoom\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23T10:17:44.000000Z\",\n            \"updated_at\": \"2022-03-23T10:17:44.000000Z\"\n        }\n    ],\n    \"errors\": [],\n    \"duration\": 0.1470627784729004\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve a shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shops/13",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shops",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/shops/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:20:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/shops/1\"\n    },\n    \"data\": {\n        \"id\": 1,\n        \"admin_id\": 1,\n        \"name\": \"SEVEN ELEVEN\",\n        \"query\": null,\n        \"latitude\": \"19.12300000\",\n        \"longitude\": \"12.34300000\",\n        \"zoom\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2022-03-23T10:17:44.000000Z\",\n        \"updated_at\": \"2022-03-23T10:17:44.000000Z\"\n    },\n    \"errors\": [],\n    \"duration\": 0.1594529151916504\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/shops/13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"13"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:20:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/api/shops/13\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The resource that matches the request ID does not found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.147352933883667\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a shop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"SEVEN ELEVEN updated\",\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shops/13",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shops",
+								"13"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"SEVEN ELEVEN updated\",\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/shops/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:22:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/shops/1\"\n    },\n    \"data\": {\n        \"id\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.16643404960632324\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/shops/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:23:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 400,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/shops/1\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The request parameters are incorrect, please make sure to follow the documentation about request parameters of the resource.\",\n        \"code\": 400002,\n        \"validation\": [\n            {\n                \"attribute\": \"name\",\n                \"error\": [\n                    {\n                        \"key\": \"required\",\n                        \"message\": \"The name field is required.\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"duration\": 0.14685297012329102\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"SEVEN ELEVEN updated\",\n    \"latitude\": 19.123,\n    \"longitude\": 12.343,\n    \"zoom\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/shops/13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"13"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:23:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"PUT\",\n        \"endpoint\": \"/api/shops/13\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The updating resource that corresponds to the ID wasn't found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.1590559482574463\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a shop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shops/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shops",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/shops/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:26:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/api/shops/2\"\n    },\n    \"data\": {\n        \"deleted\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.16240811347961426\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/shops/23",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shops",
+										"23"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:27:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/api/shops/23\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The deleting resource that corresponds to the ID wasn't found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.15152692794799805\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Coupon Shop",
+			"item": [
+				{
+					"name": "Create a Coupon Shop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"coupon_id\": 1,\n    \"shop_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/coupons/1/shops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"1",
+								"shops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"coupon_id\": 3,\n    \"shop_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/3/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"3",
+										"shops"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:56:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 404,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/1/coupons/3/shops\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The parent resource of corresponding to the given ID was not found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.1573350429534912\n}"
+						},
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"coupon_id\": 5,\n    \"shop_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/5/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"5",
+										"shops"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:57:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/1/coupons/5/shops\"\n    },\n    \"data\": {\n        \"id\": 5\n    },\n    \"errors\": [],\n    \"duration\": 0.17284083366394043\n}"
+						},
+						{
+							"name": "409",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"coupon_id\": 1,\n    \"shop_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/coupons/1/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1",
+										"shops"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 10:58:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 409,\n    \"meta\": {\n        \"method\": \"POST\",\n        \"endpoint\": \"/1/coupons/1/shops\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The inserting resource was already registered.\",\n        \"code\": 409001\n    },\n    \"duration\": 0.15497112274169922\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve the the list of CouponShops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/coupons/1/shops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"1",
+								"shops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/1/shops",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1",
+										"shops"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 12:34:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/1/coupons/1/shops\"\n    },\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Test updated id 1\",\n            \"admin_id\": 1,\n            \"description\": \"Tested\",\n            \"discount_type\": \"percentage\",\n            \"amount\": 100,\n            \"image_url\": \"tmp/ggwp.jpg\",\n            \"code\": 5678,\n            \"start_datetime\": \"2020-10-10 09:00:00\",\n            \"end_datetime\": \"2020-10-30 23:59:59\",\n            \"coupon_type\": \"public\",\n            \"used_count\": 1,\n            \"shop\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"SEVEN ELEVEN updated\",\n                    \"admin_id\": 1,\n                    \"query\": null,\n                    \"latitude\": \"19.12300000\",\n                    \"longitude\": null,\n                    \"zoom\": 1,\n                    \"created_at\": \"2022-03-23 10:17:44\",\n                    \"updated_at\": \"2022-03-23 10:22:51\"\n                }\n            ],\n            \"created_at\": \"2022-03-23 08:02:18\",\n            \"updated_at\": \"2022-03-23 10:00:02\"\n        }\n    ],\n    \"errors\": [],\n    \"duration\": 0.15136289596557617\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve a couponShop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/coupons/1/shops/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"1",
+								"shops",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/1/shops/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1",
+										"shops",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 12:34:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"GET\",\n        \"endpoint\": \"/1/coupons/1/shops/1\"\n    },\n    \"data\": {\n        \"id\": 1,\n        \"admin_id\": 1,\n        \"name\": \"Test updated id 1\",\n        \"description\": \"Tested\",\n        \"discount_type\": \"percentage\",\n        \"amount\": 100,\n        \"image_url\": \"tmp/ggwp.jpg\",\n        \"code\": 5678,\n        \"start_datetime\": \"2020-10-10 09:00:00\",\n        \"end_datetime\": \"2020-10-30 23:59:59\",\n        \"coupon_type\": \"public\",\n        \"used_count\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2022-03-23 08:02:18\",\n        \"updated_at\": \"2022-03-23 10:00:02\",\n        \"shop\": {\n            \"id\": 1,\n            \"admin_id\": 1,\n            \"name\": \"SEVEN ELEVEN updated\",\n            \"query\": null,\n            \"latitude\": \"19.12300000\",\n            \"longitude\": \"12.34300000\",\n            \"zoom\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2022-03-23 10:17:44\",\n            \"updated_at\": \"2022-03-23 10:22:51\"\n        }\n    },\n    \"errors\": [],\n    \"duration\": 0.16128897666931152\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/coupons/1/shops/2332",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"coupons",
+								"1",
+								"shops",
+								"2332"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/1/shops/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1",
+										"shops",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 12:17:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 1,\n    \"code\": 200,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/1/coupons/1/shops/2\"\n    },\n    \"data\": {\n        \"deleted\": 1\n    },\n    \"errors\": [],\n    \"duration\": 0.18838286399841309\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/coupons/1/shops/2332",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"coupons",
+										"1",
+										"shops",
+										"2332"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.21.5"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Mar 2022 12:17:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.15"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": 0,\n    \"code\": 404,\n    \"meta\": {\n        \"method\": \"DELETE\",\n        \"endpoint\": \"/1/coupons/1/shops/2332\"\n    },\n    \"data\": [],\n    \"errors\": {\n        \"message\": \"The parent resource of corresponding to the given ID was not found.\",\n        \"code\": 404002\n    },\n    \"duration\": 0.13932085037231445\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
